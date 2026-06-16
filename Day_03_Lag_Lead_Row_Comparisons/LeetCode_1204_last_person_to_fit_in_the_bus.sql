@@ -25,8 +25,6 @@ person who safely fit.
 */
 
 
-
-
 WITH CTE AS (
     SELEct person_id , person_name  , weight , turn,
     SUM(weight) OVER (order by turn asc) as "Total_Weight"
