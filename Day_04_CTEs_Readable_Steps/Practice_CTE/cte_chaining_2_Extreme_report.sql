@@ -22,7 +22,7 @@ Approach (Parallel Tracks):
    vertically into a single, clean executive summary.
 */
 -- 
--- Finding highest total -sales 
+-- Finding highest total -sales (Track 1 )
 
 (
     SELECT employee_name , total_sales as metric 
@@ -32,7 +32,7 @@ Approach (Parallel Tracks):
 )
 
 UNION ALL
--- Finding lowest total sales 
+-- Finding lowest total sales (Track 2 )
 
 (
     SELECT employee_name , total_sales as metric 
