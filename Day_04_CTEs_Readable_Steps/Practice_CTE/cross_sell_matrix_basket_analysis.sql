@@ -23,8 +23,8 @@ WITH CTE AS (
     SELECT customer_id ,
     from customer_purchases
     group by customer_id
-    HAVING  SUM(CASE WHEN product_name = 'Laptop' Then 1 else 0 END )  AND 
-    SUM(CASE WHEN product_name = 'Wireless Mouse' Then 1 else 0 END) 
+    HAVING  SUM(CASE WHEN product_name = 'Laptop' Then 1 else 0 END ) > 0  AND 
+    SUM(CASE WHEN product_name = 'Wireless Mouse' Then 1 else 0 END) > 0
 
 )
 SELECT COUNT(customer_id) as cross_sell_customers
